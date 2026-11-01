@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sessão Estratégica — LB Marketplace</title>
+<meta name="description" content="Aplicação para a sessão estratégica gratuita do Método LB para quem vende ou quer vender na Shopee, Mercado Livre, TikTok Shop e SHEIN.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="../img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+<!-- Formulário próprio da LB (31/10/2026): substitui o Typebot (plano grátis fechou o bot). Mesmos campos e o mesmo webhook do CRM. -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2748919952152076');fbq('track','PageView');
+</script>
+<style>
+:root{--bg:#0b0b0b;--card:#141414;--line:#2a2a2a;--txt:#f4f1ea;--sub:#a9a39a;--ouro:#e3b13e;--ouro2:#f6d77a;--erro:#ff6b5b}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:radial-gradient(900px 500px at 50% -10%,rgba(227,177,62,.18),transparent 70%),var(--bg)}
+header{display:flex;align-items:center;justify-content:center;gap:10px;padding:18px 16px 6px}
+header img{width:40px;height:40px;border-radius:10px}header b{font-family:Montserrat;font-weight:900;letter-spacing:.5px;font-size:15px}
+.barra{height:4px;background:#222;border-radius:4px;margin:10px auto 0;max-width:560px;width:calc(100% - 32px);overflow:hidden}.barra i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ouro),var(--ouro2));transition:width .35s}
+main{flex:1;display:flex;justify-content:center;padding:18px 16px 40px}
+.passo{width:100%;max-width:560px;display:none;animation:entra .35s ease}.passo.on{display:block}
+@keyframes entra{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.selo{display:inline-block;background:rgba(227,177,62,.14);color:var(--ouro2);border:1px solid rgba(227,177,62,.35);padding:6px 12px;border-radius:99px;font-size:12px;font-weight:600;letter-spacing:.3px}
+h1{font-family:Montserrat;font-weight:900;font-size:30px;line-height:1.12;margin:16px 0 10px}h1 em{font-style:normal;color:var(--ouro)}
+h2{font-family:Montserrat;font-weight:800;font-size:24px;line-height:1.2;margin:6px 0 8px}
+p{color:var(--sub);line-height:1.55;margin:0 0 14px;font-size:15.5px}p b{color:var(--txt)}
+.aviso{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--ouro);padding:12px 14px;border-radius:10px;font-size:14px;color:var(--sub);margin:14px 0 18px}
+input{width:100%;background:var(--card);border:1.5px solid var(--line);color:var(--txt);border-radius:12px;padding:16px;font-size:17px;font-family:inherit;outline:none;transition:border .2s}
+input:focus{border-color:var(--ouro)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;border-radius:12px;padding:17px;font-size:16.5px;font-weight:700;font-family:inherit;cursor:pointer;margin-top:14px;background:linear-gradient(180deg,var(--ouro2),var(--ouro));color:#1a1405;text-decoration:none;transition:transform .1s,opacity .2s}
+.btn:active{transform:scale(.98)}.btn[disabled]{opacity:.45;cursor:default}
+.btn.zap{background:#25d366;color:#04230f}
+.opcoes{display:grid;gap:10px;margin-top:6px}
+.op{display:flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:15px 16px;font-size:16px;cursor:pointer;text-align:left;color:var(--txt);font-family:inherit;width:100%;transition:border .15s,background .15s}
+.op:hover{border-color:#4a4a4a}.op.sel{border-color:var(--ouro);background:rgba(227,177,62,.09)}
+.op .ck{flex:0 0 20px;height:20px;border-radius:6px;border:1.5px solid #555;display:flex;align-items:center;justify-content:center;font-size:13px;color:#1a1405}
+.op.sel .ck{background:var(--ouro);border-color:var(--ouro)}
+.erro{color:var(--erro);font-size:14px;margin-top:8px;min-height:18px}
+.volta{background:none;border:0;color:var(--sub);font-family:inherit;font-size:14px;cursor:pointer;padding:6px 0;margin-bottom:6px}
+.agenda{margin-top:18px;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.agenda iframe{width:100%;height:760px;border:0;display:block}
+.mini{font-size:12.5px;color:#6f6a62;text-align:center;margin-top:22px}
+@media(min-width:700px){h1{font-size:38px}}
+</style>
+</head>
+<body>
+<header><img src="../img/logo.png" alt=""><b>LB MARKETPLACE</b></header>
+<div class="barra"><i id="barra"></i></div>
+<main>
+  <section class="passo on" data-p="0">
+    <span class="selo">Sessão estratégica gratuita · Método LB</span>
+    <h1>Bem-vindo(a) ao processo de <em>aplicação</em></h1>
+    <p>Este formulário é a primeira etapa para participar de uma <b>reunião de apresentação do Método LB</b> para lojistas, distribuidores, fabricantes e quem vende (ou quer vender) na Shopee, Mercado Livre, TikTok Shop e SHEIN.</p>
+    <div class="aviso">⚠️ <b>Importante:</b> devido à alta procura, as respostas são analisadas com atenção. Responda com sinceridade — leva menos de 2 minutos.</div>
+    <button class="btn" data-ir="1">Vamos lá</button>
+  </section>
+
+  <section class="passo" data-p="1">
+    <h2>Qual seu nome?</h2>
+    <input id="nome" autocomplete="given-name" placeholder="Seu nome" enterkeyhint="next">
+    <div class="erro" id="e1"></div>
+    <button class="btn" id="b1">Continuar</button>
+  </section>
+
+  <section class="passo" data-p="2">
+    <button class="volta" data-ir="1">‹ voltar</button>
+    <h2>Obrigado, <span class="nm"></span>! Qual seu melhor e-mail?</h2>
+    <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="seuemail@exemplo.com" enterkeyhint="next">
+    <div class="erro" id="e2"></div>
+    <button class="btn" id="b2">Continuar</button>
+  </section>
+
+  <section class="passo" data-p="3">
+    <button class="volta" data-ir="2">‹ voltar</button>
+    <h2>Qual é seu WhatsApp, <span class="nm"></span>?</h2>
+    <p>É por lá que a gente confirma a sua sessão.</p>
+    <input id="whats" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(11) 91234-5678" enterkeyhint="next">
+    <div class="erro" id="e3"></div>
+    <button class="btn" id="b3">Continuar</button>
+  </section>
+
+  <section class="passo" data-p="4">
+    <button class="volta" data-ir="3">‹ voltar</button>
+    <h2>Qual é o seu tipo de negócio?</h2>
+    <p>Isso nos ajuda a entender sua especialidade.</p>
+    <div class="opcoes" data-campo="tipoNegocio" data-proximo="5">
+      <button class="op">Sou Fabricante</button><button class="op">Sou Revendedor com estoque</button><button class="op">Sou Distribuidor</button>
+    </div>
+  </section>
+
+  <section class="passo" data-p="5">
+    <button class="volta" data-ir="4">‹ voltar</button>
+    <h2>Onde você vende hoje?</h2>
+    <p>Pode marcar mais de uma.</p>
+    <div class="opcoes" data-campo="canalVendas" data-varias="1">
+      <button class="op"><span class="ck"></span>Feirinha / Brás / Bom Retiro</button><button class="op"><span class="ck"></span>Loja física</button><button class="op"><span class="ck"></span>Atacado / revenda</button><button class="op"><span class="ck"></span>Instagram / WhatsApp</button><button class="op"><span class="ck"></span>Shopee</button><button class="op"><span class="ck"></span>Mercado Livre</button><button class="op"><span class="ck"></span>TikTok Shop</button><button class="op"><span class="ck"></span>Ainda não vendo</button>
+    </div>
+    <div class="erro" id="e5"></div>
+    <button class="btn" id="b5">Continuar</button>
+  </section>
+
+  <section class="passo" data-p="6">
+    <button class="volta" data-ir="5">‹ voltar</button>
+    <h2>Você já vende nos marketplaces?</h2>
+    <p>Shopee, Mercado Livre, TikTok Shop ou SHEIN.</p>
+    <div class="opcoes" data-campo="vendeMarketplace" data-proximo="fim">
+      <button class="op">Sim, já vendo</button><button class="op">Ainda não, quero começar</button>
+    </div>
+    <div class="erro" id="e6"></div>
+  </section>
+
+  <section class="passo" data-p="7">
+    <span class="selo">Aplicação recebida ✓</span>
+    <h2 style="margin-top:14px">Perfeito, <span class="nm"></span>! Agora escolha o melhor dia e horário pra sua sessão estratégica gratuita.</h2>
+    <p>Antes, toque aqui e mande um <b>oi no WhatsApp</b> — é por lá que mandamos a confirmação e os detalhes da sessão 👇</p>
+    <a class="btn zap" id="zap" target="_blank" rel="noopener">Mandar oi no WhatsApp</a>
+    <div class="agenda"><iframe id="agenda" title="Agenda da LB Marketplace" loading="lazy"></iframe></div>
+    <p class="mini">Não carregou a agenda? <a id="agendaLink" target="_blank" rel="noopener" style="color:var(--ouro)">Abrir a agenda</a></p>
+  </section>
+</main>
+<p class="mini">LB Marketplace · Av. Paulicéia, 1013 – Caieiras/SP</p>
+<script>
+(function(){
+  var WEBHOOK='https://lb-typebot-webhook.vercel.app/api/lead';
+  var AGENDA='https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qOPATNBLyzKdDQg1-SlVR33buCptWe_lHRsFaCgVwhYmIHjzjlcxupARJR7EpLH5W319lMXLV';
+  var ZAP='5511927209188';
+  var TOTAL=7, d={};
+  // utm/fbclid do anúncio (fica na sessão se a pessoa recarregar)
+  var q=new URLSearchParams(location.search), utm={};
+  ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid'].forEach(function(k){var v=q.get(k);try{if(v)sessionStorage.setItem('lb_'+k,v);else v=sessionStorage.getItem('lb_'+k)}catch(e){}if(v)utm[k]=v});
+  function $(id){return document.getElementById(id)}
+  function ir(n){document.querySelectorAll('.passo').forEach(function(s){s.classList.toggle('on',String(s.dataset.p)===String(n))});$('barra').style.width=Math.round(Math.min(n,TOTAL)/TOTAL*100)+'%';window.scrollTo(0,0);var inp=document.querySelector('.passo.on input');if(inp)setTimeout(function(){inp.focus()},250);document.querySelectorAll('.nm').forEach(function(e){e.textContent=d.nome||''})}
+  document.querySelectorAll('[data-ir]').forEach(function(b){b.onclick=function(){ir(b.dataset.ir)}});
+  function enviar(corpo,tent){tent=tent||0;return fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.assign({},corpo,utm,{formulario:'lb-site'})),keepalive:true}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).catch(function(e){if(tent<2)return new Promise(function(ok){setTimeout(ok,1200*(tent+1))}).then(function(){return enviar(corpo,tent+1)});throw e})}
+  function enter(id,fn){$(id).addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();fn()}})}
+  function p1(){var v=$('nome').value.trim().replace(/\s+/g,' ');if(v.length<2){$('e1').textContent='Escreve seu nome, por favor.';return}$('e1').textContent='';d.nome=v.charAt(0).toUpperCase()+v.slice(1);ir(2)}
+  function p2(){var v=$('email').value.trim().toLowerCase();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){$('e2').textContent='Confere o e-mail — parece que está incompleto.';return}$('e2').textContent='';d.email=v;ir(3)}
+  $('whats').addEventListener('input',function(){var n=this.value.replace(/\D/g,'').replace(/^55(?=\d{10,11}$)/,'').slice(0,11);var f=n;if(n.length>2)f='('+n.slice(0,2)+') '+n.slice(2);if(n.length>7)f='('+n.slice(0,2)+') '+n.slice(2,n.length-4)+'-'+n.slice(-4);this.value=f});
+  function p3(){var n=$('whats').value.replace(/\D/g,'');if(n.length<10||n.length>11){$('e3').textContent='Coloca o número com DDD, ex.: (11) 91234-5678.';return}$('e3').textContent='';d.whatsapp='+55'+n;
+    enviar({etapa:'parcial',nome:d.nome,email:d.email,whatsapp:d.whatsapp}).catch(function(){});ir(4)}
+  $('b1').onclick=p1;enter('nome',p1);$('b2').onclick=p2;enter('email',p2);$('b3').onclick=p3;enter('whats',p3);
+  document.querySelectorAll('.opcoes').forEach(function(g){var varias=g.dataset.varias;g.querySelectorAll('.op').forEach(function(o){o.onclick=function(){var txt=o.textContent.trim();
+    if(varias){o.classList.toggle('sel');if(txt==='Ainda não vendo'&&o.classList.contains('sel'))g.querySelectorAll('.op').forEach(function(x){if(x!==o)x.classList.remove('sel')});else if(txt!=='Ainda não vendo')g.querySelectorAll('.op').forEach(function(x){if(x.textContent.trim()==='Ainda não vendo')x.classList.remove('sel')});return}
+    g.querySelectorAll('.op').forEach(function(x){x.classList.remove('sel')});o.classList.add('sel');d[g.dataset.campo]=txt;
+    setTimeout(function(){g.dataset.proximo==='fim'?finalizar():ir(g.dataset.proximo)},180)}})});
+  $('b5').onclick=function(){var s=[].map.call(document.querySelectorAll('[data-campo=canalVendas] .op.sel'),function(o){return o.textContent.trim()});if(!s.length){$('e5').textContent='Marca pelo menos uma opção.';return}$('e5').textContent='';d.canalVendas=s.join(', ');ir(6)};
+  var feito=false;
+  function finalizar(){if(feito)return;feito=true;var id='lead_'+Date.now()+'_'+Math.random().toString(36).slice(2,8);
+    try{fbq('track','Lead',{content_name:'Sessão estratégica LB'},{eventID:id})}catch(e){}
+    enviar({nome:d.nome,email:d.email,whatsapp:d.whatsapp,tipoNegocio:d.tipoNegocio,canalVendas:d.canalVendas,vendeMarketplace:d.vendeMarketplace}).catch(function(){});
+    $('zap').href='https://wa.me/'+ZAP+'?text='+encodeURIComponent('Oi! Acabei de preencher o formulário da LB Marketplace. Sou '+d.nome+'.');
+    $('agenda').src=AGENDA+'?gv=true';$('agendaLink').href=AGENDA;ir(7)}
+})();
+</script>
+</body>
+</html>
