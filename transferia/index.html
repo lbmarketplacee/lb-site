@@ -22,6 +22,8 @@ h1 em{font-family:'Playfair Display',serif;color:var(--gold);font-weight:600}
 .sub{color:var(--dim);font-size:clamp(16px,2.2vw,19px);max-width:680px;margin:0 auto 26px}
 .btn{display:inline-block;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#1a1407;font-weight:800;text-decoration:none;border-radius:999px;padding:17px 34px;font-size:18px;box-shadow:0 10px 30px rgba(217,180,90,.25)}
 .btn:hover{filter:brightness(1.05)}
+.vsl{max-width:380px;margin:4px auto 26px;border-radius:22px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 18px 50px rgba(0,0,0,.55)}
+.vsl video{display:block;width:100%;aspect-ratio:9/16;background:#000}
 .nota{color:var(--dim);font-size:13.5px;margin-top:12px}
 .videos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-block:20px 40px;max-width:720px;margin:0 auto}
 .vid{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
@@ -53,6 +55,7 @@ footer{border-top:1px solid var(--line);padding-block:26px;color:var(--dim);font
   <span class="tag">CURSO ONLINE · SEM PROGRAMAÇÃO</span>
   <h1>Vire <em>qualquer personagem</em> num estalo de dedo</h1>
   <p class="sub">Grave um vídeo seu e, no meio da fala, vire outra pessoa, um avatar, um velhinho, o que quiser, com cara de real e com a sua voz. Pra stories, Reels e anúncios.</p>
+  <div class="vsl"><video src="vsl.mp4" poster="vsl-capa.jpg" controls playsinline preload="metadata"></video></div>
   <a class="btn" href="#comprar" data-checkout>Quero o Transfer.IA</a>
   <p class="nota">Acesso na hora pelo e-mail · Garantia de 7 dias</p>
 </div></div>
