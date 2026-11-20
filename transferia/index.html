@@ -108,7 +108,7 @@ footer{border-top:1px solid var(--line);padding-block:26px;color:var(--dim);font
 <footer><div class="w">Transfer.IA · um produto LB Marketplace · contato: lincoln@lbmarketplace.com.br</div></footer>
 <script>
 // link do checkout da Perfect Pay (preenchido quando o produto for criado)
-const CHECKOUT='';
+const CHECKOUT='https://go.perfectpay.com.br/PPU38CQHU00';
 document.querySelectorAll('[data-checkout]').forEach(a=>{if(CHECKOUT){a.href=CHECKOUT;a.addEventListener('click',()=>{try{fbq('track','InitiateCheckout',{value:97.99,currency:'BRL'})}catch(e){}})}else a.href='#comprar'});
 </script>
 </body>
