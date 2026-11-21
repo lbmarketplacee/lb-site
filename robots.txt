@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /links/
+
+Sitemap: https://lbmarketplace.com.br/sitemap.xml
