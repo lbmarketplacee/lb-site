@@ -114,10 +114,27 @@ input:focus{border-color:var(--ouro)}
     <button class="volta" data-ir="5">‹ voltar</button>
     <h2>Você já vende nos marketplaces?</h2>
     <p>Shopee, Mercado Livre, TikTok Shop ou SHEIN.</p>
-    <div class="opcoes" data-campo="vendeMarketplace" data-proximo="fim">
+    <div class="opcoes" data-campo="vendeMarketplace" data-proximo="8">
       <button class="op">Sim, já vendo</button><button class="op">Ainda não, quero começar</button>
     </div>
     <div class="erro" id="e6"></div>
+  </section>
+
+  <section class="passo" data-p="8">
+    <button class="volta" data-ir="6">‹ voltar</button>
+    <h2>Quanto o seu negócio fatura por mês?</h2>
+    <p>Somando tudo: feira, loja, atacado e internet.</p>
+    <div class="opcoes" data-campo="faturamento" data-proximo="fim">
+      <button class="op">Até R$ 10 mil</button><button class="op">De R$ 10 mil a R$ 50 mil</button><button class="op">De R$ 50 mil a R$ 150 mil</button><button class="op">Acima de R$ 150 mil</button>
+    </div>
+  </section>
+
+  <section class="passo" data-p="9">
+    <span class="selo">Aplicação recebida ✓</span>
+    <h2 style="margin-top:14px">Obrigado, <span class="nm"></span>!</h2>
+    <p>Pelo que você contou, o melhor primeiro passo é acertar o preço dos seus produtos antes de abrir a loja. O <b>LB Precifica</b> calcula o preço certo pra Shopee, Mercado Livre, TikTok e SHEIN, já com todas as taxas, e está <b>grátis até 30/11</b>.</p>
+    <a class="btn" id="precifica" target="_blank" rel="noopener" href="https://lbprecifica.lbmarketplace.com.br/?utm_source=meta&amp;utm_medium=form&amp;utm_campaign=aplicacao">Usar o LB Precifica grátis</a>
+    <p class="mini" style="margin-top:14px"><a href="#" id="mesmoAssim" style="color:var(--ouro)">Prefiro conversar com a equipe mesmo assim</a></p>
   </section>
 
   <section class="passo" data-p="7">
@@ -135,7 +152,7 @@ input:focus{border-color:var(--ouro)}
   var WEBHOOK='https://lb-typebot-webhook.vercel.app/api/lead';
   var AGENDA='https://calendar.google.com/calendar/appointments/schedules/AcZssZ3qOPATNBLyzKdDQg1-SlVR33buCptWe_lHRsFaCgVwhYmIHjzjlcxupARJR7EpLH5W319lMXLV';
   var ZAP='5511927209188';
-  var TOTAL=7, d={};
+  var TOTAL=8, d={};
   // utm/fbclid do anúncio (fica na sessão se a pessoa recarregar)
   var q=new URLSearchParams(location.search), utm={};
   ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid'].forEach(function(k){var v=q.get(k);try{if(v)sessionStorage.setItem('lb_'+k,v);else v=sessionStorage.getItem('lb_'+k)}catch(e){}if(v)utm[k]=v});
@@ -156,11 +173,19 @@ input:focus{border-color:var(--ouro)}
     setTimeout(function(){g.dataset.proximo==='fim'?finalizar():ir(g.dataset.proximo)},180)}})});
   $('b5').onclick=function(){var s=[].map.call(document.querySelectorAll('[data-campo=canalVendas] .op.sel'),function(o){return o.textContent.trim()});if(!s.length){$('e5').textContent='Marca pelo menos uma opção.';return}$('e5').textContent='';d.canalVendas=s.join(', ');ir(6)};
   var feito=false;
+  // 25/11/2026 (Lincoln): volta o filtro. Fatura até R$ 10 mil e ainda não vende nos marketplaces = iniciante → LB Precifica
+  // (pode pedir a conversa mesmo assim). O pixel 'Lead' só dispara pra quem tem perfil, pro Meta otimizar atrás de lead bom.
+  function iniciante(){return /^Até R\$ 10 mil/.test(d.faturamento||'')&&/^Ainda não/.test(d.vendeMarketplace||'')}
   function finalizar(){if(feito)return;feito=true;var id='lead_'+Date.now()+'_'+Math.random().toString(36).slice(2,8);
-    try{fbq('track','Lead',{content_name:'Sessão estratégica LB'},{eventID:id})}catch(e){}
-    enviar({nome:d.nome,email:d.email,whatsapp:d.whatsapp,tipoNegocio:d.tipoNegocio,canalVendas:d.canalVendas,vendeMarketplace:d.vendeMarketplace}).catch(function(){});
+    var ini=iniciante();
+    try{fbq('trackCustom',ini?'LeadIniciante':'LeadPerfil',{faturamento:d.faturamento},{eventID:id+'_c'});if(!ini)fbq('track','Lead',{content_name:'Sessão estratégica LB'},{eventID:id})}catch(e){}
+    enviar({nome:d.nome,email:d.email,whatsapp:d.whatsapp,tipoNegocio:d.tipoNegocio,canalVendas:d.canalVendas,vendeMarketplace:d.vendeMarketplace,faturamento:d.faturamento,perfilForm:ini?'iniciante':'perfil'}).catch(function(){});
+    if(ini){ir(9);return}
+    agenda()}
+  function agenda(){
     $('zap').href='https://wa.me/'+ZAP+'?text='+encodeURIComponent('Oi! Acabei de preencher o formulário da LB Marketplace. Sou '+d.nome+'.');
     $('agenda').src=AGENDA+'?gv=true';$('agendaLink').href=AGENDA;ir(7)}
+  $('mesmoAssim').onclick=function(e){e.preventDefault();agenda()};
 })();
 </script>
 </body>
