@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suely Modas</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Suely Modas — moda feminina do P ao G3, direto da confecção. Atacado pelo WhatsApp e varejo na Shopee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0908; --bg2:#100E0C; --surface:#15130F; --line:rgba(255,255,255,.08);
+  --ink:#F5EFE4; --ink2:#D9D1C3; --muted:#9C9384;
+  --gold:#D9AE52; --gold2:#F0CF7A; --goldln:rgba(217,174,82,.38); --goldbg:rgba(217,174,82,.10);
+  --disp:'Plus Jakarta Sans',Inter,Arial,sans-serif; --serif:'Instrument Serif',Georgia,serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--disp);font-weight:800;letter-spacing:-.04em;line-height:1}
+.serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--gold2);background:linear-gradient(100deg,#B8862E,#F6DA8E 45%,#C9963A);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.kick{display:inline-flex;align-items:center;gap:8px;color:var(--gold2);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:99px;padding:15px 26px;font-weight:600;font-size:15.5px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--ink);transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:linear-gradient(180deg,#F0CF7A,#D3A646);color:#1B1408;border-color:transparent;box-shadow:0 10px 40px rgba(217,174,82,.35),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn.gold:hover{box-shadow:0 14px 50px rgba(217,174,82,.5),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn svg{width:18px;height:18px}
+
+/* fundo do topo */
+.topo-fx{position:absolute;inset:0 0 auto 0;height:1100px;pointer-events:none;z-index:0;
+  background:radial-gradient(760px 460px at 50% -80px,rgba(217,174,82,.30),transparent 70%),radial-gradient(520px 320px at 12% 25%,rgba(217,174,82,.08),transparent 70%),radial-gradient(520px 320px at 88% 32%,rgba(240,207,122,.07),transparent 70%)}
+.grade-fx{position:absolute;inset:0 0 auto 0;height:900px;pointer-events:none;opacity:.55;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 22%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 22%,#000 30%,transparent 75%)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.sc{background:rgba(10,9,8,.74);backdrop-filter:blur(14px) saturate(1.3);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.marca{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:24px}
+.marca img{width:44px;height:44px;border-radius:50%}
+.links{display:flex;gap:30px;font-size:14.5px;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+@media(max-width:880px){.links{display:none}}
+
+/* hero */
+.hero{position:relative;z-index:1;text-align:center;padding:56px 0 0}
+.pill-top{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--goldln);background:var(--goldbg);color:var(--gold2);border-radius:99px;padding:8px 16px;font-size:13.5px;font-weight:500;box-shadow:0 0 34px rgba(217,174,82,.14)}
+.pisca{width:8px;height:8px;border-radius:50%;background:#7BE0A0;box-shadow:0 0 0 0 rgba(123,224,160,.6);animation:pisca 1.8s infinite}
+@keyframes pisca{70%{box-shadow:0 0 0 10px rgba(123,224,160,0)}100%{box-shadow:0 0 0 0 rgba(123,224,160,0)}}
+.hero h1{font-size:clamp(46px,8.8vw,118px);margin:30px auto 24px;max-width:1150px}
+.hero h1 .serif{font-size:1.08em}
+.pal{display:inline-block;opacity:0;transform:translateY(40px);filter:blur(10px);animation:pal .9s cubic-bezier(.2,.75,.2,1) forwards}
+@keyframes pal{to{opacity:1;transform:none;filter:blur(0)}}
+.hero .sub{font-size:clamp(16px,1.6vw,19.5px);color:var(--muted);max-width:700px;margin:0 auto 36px}
+.hero .sub b{color:var(--ink);font-weight:600}
+.ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.ctas .btn{padding:17px 30px;font-size:16.5px}
+.trust{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.trust span{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:99px;padding:8px 14px;font-size:13.5px;color:var(--muted)}
+.trust b{color:var(--ink);font-weight:600}
+.trust svg{width:15px;height:15px;color:var(--gold)}
+.entra{opacity:0;transform:translateY(24px);animation:pal .9s cubic-bezier(.2,.75,.2,1) forwards}
+
+/* leque de fotos do hero */
+.leque{position:relative;height:clamp(340px,46vw,560px);margin:64px auto 70px;max-width:1100px}
+.lq{position:absolute;bottom:0;width:clamp(150px,22vw,280px);aspect-ratio:3/4;border-radius:22px;overflow:hidden;border:1px solid var(--goldln);box-shadow:0 40px 90px rgba(0,0,0,.6);opacity:0;animation:sobeLq 1.1s cubic-bezier(.2,.75,.2,1) forwards;will-change:transform}
+.lq img{width:100%;height:100%;object-fit:cover}
+.lq:nth-child(1){left:6%;--r:-9deg;--y:40px;animation-delay:.55s}
+.lq:nth-child(2){left:23%;--r:-4deg;--y:12px;animation-delay:.7s}
+.lq:nth-child(3){left:50%;margin-left:calc(clamp(150px,22vw,280px)/-2);--r:0deg;--y:0px;animation-delay:.85s;z-index:2;width:clamp(170px,25vw,320px)}
+.lq:nth-child(3){margin-left:calc(clamp(170px,25vw,320px)/-2)}
+.lq:nth-child(4){right:23%;--r:4deg;--y:12px;animation-delay:1s}
+.lq:nth-child(5){right:6%;--r:9deg;--y:40px;animation-delay:1.15s}
+@keyframes sobeLq{from{opacity:0;transform:translateY(120px) rotate(0deg)}to{opacity:1;transform:translateY(var(--y)) rotate(var(--r))}}
+.leque:after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:42%;background:linear-gradient(transparent,var(--bg));z-index:3;pointer-events:none}
+@media(max-width:700px){.lq:nth-child(1),.lq:nth-child(5){display:none}.lq:nth-child(2){left:2%}.lq:nth-child(4){right:2%}}
+
+/* faixas correndo */
+.marq{position:relative;overflow:hidden;padding:10px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.trilho{display:flex;gap:16px;width:max-content;animation:corre 55s linear infinite}
+.marq.inv .trilho{animation-direction:reverse;animation-duration:65s}
+.marq:hover .trilho{animation-play-state:paused}
+@keyframes corre{to{transform:translateX(-50%)}}
+.mc{width:230px;flex:none;background:linear-gradient(180deg,#171512,#110F0D);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.mc .ph{height:270px;position:relative;overflow:hidden}
+.mc .ph img{width:100%;height:100%;object-fit:cover}
+.mc .tg{position:absolute;left:10px;top:10px;background:rgba(10,9,8,.72);border:1px solid var(--goldln);color:var(--gold2);font-size:11px;font-weight:600;border-radius:99px;padding:3px 10px;backdrop-filter:blur(6px)}
+.mc .cap{padding:12px 14px}
+.mc .cap b{display:block;font-size:13.5px;line-height:1.3}
+.mc .cap span{font:800 20px var(--disp);letter-spacing:-.02em;color:var(--gold2)}
+.mc .cap small{color:var(--muted);font-size:12px;margin-left:6px}
+
+/* seções */
+section.sec{position:relative;padding:120px 0}
+.sec-h{text-align:center;max-width:780px;margin:0 auto 56px}
+.sec-h h2{font-size:clamp(36px,5.2vw,66px);margin:16px 0}
+.sec-h p{color:var(--muted);font-size:17.5px}
+
+/* números */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.num{background:linear-gradient(180deg,#15130F,#100E0C);border:1px solid var(--line);border-radius:24px;padding:30px 26px;position:relative;overflow:hidden}
+.num b{display:block;font:800 clamp(40px,5vw,62px)/1 var(--disp);letter-spacing:-.05em}
+.num b .serif{font-size:1em}
+.num p{color:var(--muted);margin-top:10px;font-size:14.5px}
+.num:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(217,174,82,.16),transparent 70%);right:-80px;bottom:-110px}
+
+/* bento coleção */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:300px;gap:18px}
+.bx{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);background:#120F0C;isolation:isolate}
+.bx:before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(140deg,rgba(217,174,82,.55),transparent 42%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:3}
+.bx img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);z-index:-1}
+.bx:hover img{transform:scale(1.06)}
+.bx:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,9,8,.88));z-index:-1}
+.bx .info{position:absolute;left:22px;right:22px;bottom:20px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.bx .info h3{font-size:clamp(18px,1.8vw,24px);letter-spacing:-.03em;line-height:1.15}
+.bx .info small{display:block;color:var(--muted);font-size:12.5px;margin-top:6px;letter-spacing:.06em}
+.preco{flex:none;background:rgba(10,9,8,.6);border:1px solid var(--goldln);border-radius:99px;padding:6px 13px;font:700 14px var(--disp);color:var(--gold2);backdrop-filter:blur(8px)}
+.w2{grid-column:span 2}.w3{grid-column:span 3}.w4{grid-column:span 4}.h2{grid-row:span 2}
+.bx .selo{position:absolute;left:18px;top:18px;background:var(--gold);color:#1B1408;font-size:11.5px;font-weight:700;border-radius:99px;padding:5px 11px;letter-spacing:.04em}
+
+/* plus */
+.plus{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.plus .fotos{position:relative;height:640px}
+.plus .fotos .f{position:absolute;border-radius:26px;overflow:hidden;border:1px solid var(--goldln);box-shadow:0 40px 90px rgba(0,0,0,.55)}
+.plus .fotos .f img{width:100%;height:100%;object-fit:cover}
+.plus .fotos .f1{left:0;top:0;width:68%;height:86%}
+.plus .fotos .f2{right:0;bottom:0;width:48%;height:58%}
+.plus h2{font-size:clamp(36px,4.8vw,62px);margin:16px 0 18px}
+.plus p{color:var(--muted);font-size:17px;max-width:46ch}
+.lista{margin-top:30px;display:grid;gap:10px}
+.lista a{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:14px 16px;transition:border-color .25s,background .25s}
+.lista a:hover{border-color:var(--goldln);background:var(--goldbg)}
+.lista a span{flex:1;font-weight:600;font-size:15px}
+.lista a b{font:800 18px var(--disp);color:var(--gold2)}
+.lista a em{font-style:normal;font-size:12.5px;color:var(--muted);min-width:76px;text-align:right}
+
+/* passos */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ps{position:relative;background:linear-gradient(180deg,#15130F,#100E0C);border:1px solid var(--line);border-radius:24px;padding:32px;overflow:hidden}
+.ps .n{font:400 96px/1 var(--serif);font-style:italic;color:transparent;-webkit-text-stroke:1px var(--goldln);position:absolute;right:20px;top:6px}
+.ps .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:var(--goldbg);color:var(--gold2);border:1px solid var(--goldln);margin-bottom:22px}
+.ps .ic svg{width:22px;height:22px}
+.ps h3{font-size:21px;margin-bottom:10px;letter-spacing:-.03em}
+.ps p{color:var(--muted)}
+
+/* varejo */
+.lojas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.lj{background:linear-gradient(180deg,#15130F,#100E0C);border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:16px;min-height:170px;transition:transform .3s,border-color .3s}
+.lj:hover{transform:translateY(-4px)}
+.lj.on{border-color:var(--goldln);box-shadow:0 0 50px rgba(217,174,82,.12)}
+.lj .nome{font:800 22px var(--disp);letter-spacing:-.03em}
+.lj .st{margin-top:auto;font-size:13.5px;color:var(--muted)}
+.lj.on .st{color:var(--gold2);font-weight:600}
+.dot{width:12px;height:12px;border-radius:50%}
+
+/* faq */
+.faq{max-width:840px;margin:0 auto;display:grid;gap:12px}
+.faq details{background:linear-gradient(180deg,#15130F,#100E0C);border:1px solid var(--line);border-radius:18px;padding:20px 24px;transition:border-color .25s}
+.faq details[open]{border-color:var(--goldln)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:600;font-size:16.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-size:24px;line-height:1;color:var(--gold2);transition:transform .3s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);margin-top:12px}
+
+/* cta final */
+.final{position:relative;text-align:center;border:1px solid var(--goldln);border-radius:34px;padding:90px 24px;overflow:hidden;background:radial-gradient(600px 320px at 50% 0,rgba(217,174,82,.22),transparent 70%),linear-gradient(180deg,#15130F,#0D0B09)}
+.final h2{font-size:clamp(38px,6vw,80px);margin:18px auto 20px;max-width:900px}
+.final p{color:var(--muted);font-size:17.5px;max-width:560px;margin:0 auto 34px}
+
+footer{padding:70px 0 120px;color:var(--muted);font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;border-top:1px solid var(--line);padding-top:40px}
+footer h4{color:var(--ink);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;font-family:Inter}
+footer a{display:block;margin-top:6px}
+footer a:hover{color:var(--gold2)}
+
+.zap{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:50;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 12px 34px rgba(37,211,102,.4);animation:zap 2.6s infinite}
+.zap svg{width:30px;height:30px}
+@keyframes zap{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+
+/* revelar ao rolar */
+.rv{opacity:0;transform:translateY(40px) scale(.98);filter:blur(6px);transition:opacity .9s cubic-bezier(.2,.75,.2,1),transform .9s cubic-bezier(.2,.75,.2,1),filter .9s}
+.rv.vis{opacity:1;transform:none;filter:none}
+
+@media(max-width:980px){
+  .nums{grid-template-columns:repeat(2,1fr)}
+  .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:260px}
+  .w2,.w3,.w4{grid-column:span 2}.h2{grid-row:span 1}
+  .bento .meia{grid-column:span 1}
+  .plus{grid-template-columns:1fr}.plus .fotos{height:520px}
+  .passos,.lojas{grid-template-columns:1fr 1fr}
+  footer .wrap{grid-template-columns:1fr}
+  section.sec{padding:84px 0}
+}
+@media(max-width:560px){.passos,.lojas{grid-template-columns:1fr}.plus .fotos{height:440px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.pal,.entra,.lq,.rv{opacity:1!important;transform:none!important;filter:none!important}}
+</style>
+</head>
+<body>
+<div style="position:relative;z-index:60;background:#D9AE52;color:#1B1408;text-align:center;font:600 13px Inter,Arial,sans-serif;padding:8px 16px">Prévia do site novo da Suely Modas · proposta da LB Marketplace</div>
+<div class="topo-fx"></div><div class="grade-fx"></div>
+
+<header class="nav" id="nav"><div class="wrap">
+  <a class="marca" href="#topo"><img src="img/logo.png" alt="Logo Suely Modas">Suely Modas</a>
+  <nav class="links"><a href="#colecao">Coleção</a><a href="#plus">Plus Size</a><a href="#atacado">Atacado</a><a href="#varejo">Varejo</a><a href="#duvidas">Dúvidas</a></nav>
+  <a class="btn gold" href="https://wa.me/5511959978533?text=Ol%C3%A1!%20Quero%20comprar%20no%20atacado." target="_blank" rel="noopener">Atacado <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div></header>
+
+<section class="hero" id="topo"><div class="wrap">
+  <span class="pill-top entra" style="animation-delay:.05s"><span class="pisca"></span>Produção própria · Atacado e varejo</span>
+  <h1><span class="pal" style="animation-delay:.1s">Moda</span> <span class="pal" style="animation-delay:.18s">feminina</span> <span class="pal" style="animation-delay:.26s">que</span> <span class="pal serif" style="animation-delay:.34s">veste</span> <span class="pal serif" style="animation-delay:.42s">bem</span><br><span class="pal" style="animation-delay:.5s">do</span> <span class="pal" style="animation-delay:.58s">P</span> <span class="pal" style="animation-delay:.66s">ao</span> <span class="pal" style="animation-delay:.74s">G3.</span></h1>
+  <p class="sub entra" style="animation-delay:.85s">Alfaiataria, calças, shorts e conjuntos feitos na nossa produção. <b>Compre no atacado</b> para revender ou <b>peça a sua no varejo</b>, direto de quem faz.</p>
+  <div class="ctas entra" style="animation-delay:1s">
+    <a class="btn gold" href="#atacado">Comprar no atacado <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn" href="#varejo">Comprar no varejo</a>
+  </div>
+  <div class="trust entra" style="animation-delay:1.15s">
+    <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.7-5.4 4.8 1.6 7.1L12 17.6 5.6 21.2l1.6-7.1L1.8 9.3 9 8.6z"/></svg><b>4,88</b> na Shopee</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><b>+8 mil</b> peças vendidas</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Envio para <b>todo o Brasil</b></span>
+  </div>
+  <div class="leque">
+    <div class="lq"><img src="img/cargo.jpg" alt="Calça pantalona cargo marrom"></div>
+    <div class="lq"><img src="img/camisa.jpg" alt="Camisa social preta"></div>
+    <div class="lq"><img src="img/hero.jpg" alt="Conjunto alfaiataria vinho plus size"></div>
+    <div class="lq"><img src="img/cenoura2.jpg" alt="Calça alfaiataria cenoura cinza"></div>
+    <div class="lq"><img src="img/plus2.jpg" alt="Conjunto alfaiataria azul-marinho plus size"></div>
+  </div>
+</div></section>
+
+<div class="marq" style="margin-top:20px"><div class="trilho" id="t1"></div></div>
+<div class="marq inv"><div class="trilho" id="t2"></div></div>
+
+<section class="sec"><div class="wrap">
+  <div class="nums">
+    <div class="num rv"><b><span class="cont" data-ate="4.88" data-dec="2">0</span><span class="serif">★</span></b><p>nota da loja na Shopee</p></div>
+    <div class="num rv"><b>+<span class="cont" data-ate="8000" data-mil="1">0</span></b><p>peças vendidas na Shopee</p></div>
+    <div class="num rv"><b><span class="cont" data-ate="680">0</span></b><p>avaliações só na saia mais vendida</p></div>
+    <div class="num rv"><b>P<span class="serif"> a </span>G3</b><p>grade completa, com linha plus size</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="colecao" style="padding-top:0"><div class="wrap">
+  <div class="sec-h rv"><span class="kick">A coleção</span><h2>Peças que <span class="serif">vendem</span> na sua loja</h2><p>Preços de atacado direto da confecção. As fotos são da nossa produção.</p></div>
+  <div class="bento">
+    <a class="bx w2 h2 rv" href="#atacado"><img src="img/pantalona.jpg" alt="Calça pantalona alfaiataria preta" loading="lazy"><span class="selo">Mais vendida</span><div class="info"><div><h3>Calça Pantalona Alfaiataria</h3><small>36 · 38 · 40 · 42</small></div><span class="preco">R$ 35</span></div></a>
+    <a class="bx w2 rv" href="#atacado"><img src="img/cargo.jpg" alt="Calça pantalona moletom cargo" loading="lazy"><div class="info"><div><h3>Pantalona Moletom Cargo</h3><small>P · M · G · GG</small></div><span class="preco">R$ 40</span></div></a>
+    <a class="bx w2 rv" href="#atacado"><img src="img/duna.jpg" alt="Short Duna pink" loading="lazy"><div class="info"><div><h3>Short Duna</h3><small>M ao G3</small></div><span class="preco">R$ 12</span></div></a>
+    <a class="bx w2 rv" href="#atacado"><img src="img/cenoura2.jpg" alt="Calça alfaiataria cenoura" loading="lazy"><div class="info"><div><h3>Calça Alfaiataria Cenoura</h3><small>P · M · G · GG</small></div><span class="preco">R$ 27</span></div></a>
+    <a class="bx w2 rv" href="#atacado"><img src="img/camisa.jpg" alt="Camisa social viscoamida" loading="lazy"><div class="info"><div><h3>Camisa Social Viscoamida</h3><small>M · G · GG</small></div><span class="preco">R$ 28</span></div></a>
+    <a class="bx w3 rv meia" href="#plus"><img src="img/hero.jpg" alt="Conjunto alfaiataria plus size vinho" loading="lazy"><span class="selo">Plus Size</span><div class="info"><div><h3>Conjunto Alfaiataria Plus Size</h3><small>G1 · G2 · G3</small></div><span class="preco">R$ 50</span></div></a>
+    <a class="bx w3 rv meia" href="#plus"><img src="img/shortplus.jpg" alt="Short alfaiataria plus size com barra" loading="lazy"><span class="selo">Plus Size</span><div class="info"><div><h3>Short Alfaiataria Plus Size</h3><small>G1 · G2 · G3</small></div><span class="preco">R$ 25</span></div></a>
+  </div>
+</div></section>
+
+<section class="sec" id="plus" style="padding-top:0"><div class="wrap plus">
+  <div class="fotos rv"><div class="f f1" data-par="-0.06"><img src="img/plus2.jpg" alt="Conjunto plus size azul-marinho" loading="lazy"></div><div class="f f2" data-par="0.08"><img src="img/pluscint.jpg" alt="Calça plus size com cinto" loading="lazy"></div></div>
+  <div class="rv">
+    <span class="kick">Linha Plus Size</span>
+    <h2>Modelagem feita para o <span class="serif">G1, G2 e G3</span></h2>
+    <p>Não é só aumentar o tamanho: cada peça plus tem caimento próprio, pra vestir bem e vender bem.</p>
+    <div class="lista">
+      <a href="#atacado"><span>Conjunto Alfaiataria</span><em>G1 · G3</em><b>R$ 50</b></a>
+      <a href="#atacado"><span>Calça Alfaiataria com Cinto</span><em>G1 · G3</em><b>R$ 34</b></a>
+      <a href="#atacado"><span>Calça Alfaiataria</span><em>G1 · G3</em><b>R$ 29</b></a>
+      <a href="#atacado"><span>Short Alfaiataria com Barra</span><em>G1 · G3</em><b>R$ 25</b></a>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="atacado" style="padding-top:0"><div class="wrap">
+  <div class="sec-h rv"><span class="kick">Atacado</span><h2>Revenda em <span class="serif">3 passos</span></h2><p>Preço de fábrica, reposição frequente e grade completa pra você montar a sua margem.</p></div>
+  <div class="passos">
+    <div class="ps rv"><span class="n">1</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3.6-7.2L21 3v6h-6"/></svg></div><h3>Chame no WhatsApp</h3><p>Receba o catálogo completo com cores, grade e preços de atacado.</p></div>
+    <div class="ps rv"><span class="n">2</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Monte o pedido</h3><p>Escolha modelos, cores e quantidades. Pedido mínimo: [a confirmar].</p></div>
+    <div class="ps rv"><span class="n">3</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Receba onde estiver</h3><p>Transportadora para todo o Brasil ou ônibus de excursão, quando houver pra sua região.</p></div>
+  </div>
+  <div style="text-align:center;margin-top:40px" class="rv"><a class="btn gold" href="https://wa.me/5511959978533?text=Ol%C3%A1!%20Quero%20comprar%20no%20atacado%20para%20revenda.%20Pode%20me%20mandar%20o%20cat%C3%A1logo%20e%20o%20pedido%20m%C3%ADnimo%3F" target="_blank" rel="noopener">Pedir o catálogo de atacado <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div></section>
+
+<section class="sec" id="varejo" style="padding-top:0"><div class="wrap">
+  <div class="sec-h rv"><span class="kick">Varejo</span><h2>Quer uma peça só? <span class="serif">Compre aqui</span></h2><p>As mesmas peças, com entrega e pagamento pelos marketplaces.</p></div>
+  <div class="lojas">
+    <a class="lj on rv" href="https://br.shp.ee/vMkDh3vX" target="_blank" rel="noopener"><span class="dot" style="background:#EE4D2D"></span><span class="nome">Shopee</span><span class="st">Comprar agora →</span></a>
+    <div class="lj rv"><span class="dot" style="background:#FFE600"></span><span class="nome">Mercado Livre</span><span class="st">Em breve</span></div>
+    <div class="lj rv"><span class="dot" style="background:#FE2C55"></span><span class="nome">TikTok Shop</span><span class="st">Em breve</span></div>
+    <div class="lj rv"><span class="dot" style="background:#F5EFE4"></span><span class="nome">SHEIN</span><span class="st">Em breve</span></div>
+  </div>
+</div></section>
+
+<section class="sec" id="duvidas" style="padding-top:0"><div class="wrap">
+  <div class="sec-h rv"><span class="kick">Dúvidas</span><h2>Perguntas <span class="serif">frequentes</span></h2></div>
+  <div class="faq rv">
+    <details><summary>Vocês vendem no atacado e no varejo?</summary><p>Sim. No atacado o atendimento é pelo WhatsApp, com preço de confecção. No varejo você compra peças avulsas pela nossa loja na Shopee.</p></details>
+    <details><summary>Qual é o pedido mínimo no atacado?</summary><p>[Pedido mínimo a confirmar.] Chame no WhatsApp que mandamos o catálogo e as condições.</p></details>
+    <details><summary>Até que tamanho vocês fazem?</summary><p>Do P ao G3, dependendo do modelo. A linha Plus Size tem modelagem própria para G1, G2 e G3.</p></details>
+    <details><summary>Como funciona o envio?</summary><p>Enviamos para todo o Brasil e combinamos despacho por ônibus de excursão quando há opção para a sua região.</p></details>
+    <details><summary>Onde fica a Suely Modas?</summary><p>Rua Eva Périco Rachid, 121 — Vila Doutor Eiras, São Paulo/SP, CEP 08010-180.</p></details>
+  </div>
+</div></section>
+
+<section style="padding:0 0 40px"><div class="wrap">
+  <div class="final rv"><span class="kick">Suely Modas</span><h2>Sua próxima coleção <span class="serif">começa aqui</span></h2><p>Fale com o atacado e receba o catálogo completo hoje.</p>
+    <a class="btn gold" href="https://wa.me/5511959978533?text=Ol%C3%A1!%20Quero%20o%20cat%C3%A1logo%20de%20atacado%20da%20Suely%20Modas." target="_blank" rel="noopener" style="padding:18px 32px;font-size:17px">Chamar no WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><a class="marca" href="#topo" style="margin-top:0"><img src="img/logo.png" alt="">Suely Modas</a><p style="margin-top:14px;max-width:36ch">Moda feminina do P ao G3, direto da confecção. CNPJ 18.541.520/0001-77.</p></div>
+  <div><h4>Atendimento</h4><a href="https://wa.me/5511959978533" target="_blank" rel="noopener">WhatsApp (11) 95997-8533</a><a href="https://www.instagram.com/_suelymodas/" target="_blank" rel="noopener">Instagram @_suelymodas</a><a href="https://br.shp.ee/vMkDh3vX" target="_blank" rel="noopener">Loja na Shopee</a></div>
+  <div><h4>Endereço</h4><p>Rua Eva Périco Rachid, 121<br>Vila Doutor Eiras · São Paulo/SP<br>CEP 08010-180</p></div>
+</div></footer>
+
+<a class="zap" href="https://wa.me/5511959978533?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Suely%20Modas." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a7.6 7.6 0 0 1-3.8-3.3c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1.1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 1.8 17.9L.1 24l6.3-1.6A11.8 11.8 0 1 0 12 .2z"/></svg></a>
+
+<script>
+(function(){
+  // faixas de produtos (repetidas pra correr sem emenda)
+  var P=[["hero","Conjunto Alfaiataria Plus","R$ 50","Plus Size"],["pantalona","Calça Pantalona Alfaiataria","R$ 35","Mais vendida"],["duna","Short Duna","R$ 12","Atacado"],["camisa","Camisa Social Viscoamida","R$ 28","Novidade"],["cargo","Pantalona Moletom Cargo","R$ 40","Atacado"],["cenoura2","Calça Alfaiataria Cenoura","R$ 27","Atacado"],["plus2","Conjunto Plus Marinho","R$ 50","Plus Size"],["pluscint","Calça Plus com Cinto","R$ 34","Plus Size"],["shortplus","Short Plus com Barra","R$ 25","Plus Size"]];
+  var V=[["shp-saia","Saia Midi Isis","R$ 33,53","680 avaliações"],["shp-calca","Calça Alfaiataria Reta","R$ 46,83","Shopee"],["shp-vestido","Vestido Sensorial","R$ 58,56","Shopee"],["shp-short","Short Duna com Corrente","R$ 21,60","Shopee"],["shp-cenoura","Calça Cenoura","R$ 47,89","Shopee"]];
+  function card(p,sub){return '<div class="mc"><div class="ph"><img src="img/'+p[0]+'.jpg" alt="'+p[1]+'" loading="lazy"><span class="tg">'+p[3]+'</span></div><div class="cap"><b>'+p[1]+'</b><span>'+p[2]+'</span><small>'+sub+'</small></div></div>'}
+  function encher(id,lista,sub){var h=lista.map(function(p){return card(p,sub)}).join('');document.getElementById(id).innerHTML=h+h+h;}
+  encher('t1',P,'atacado');encher('t2',V.concat(V),'varejo');
+
+  // nav ao rolar
+  var nav=document.getElementById('nav');
+  function sc(){nav.classList.toggle('sc',scrollY>20)}addEventListener('scroll',sc,{passive:true});sc();
+
+  // contadores
+  function contar(el){var ate=parseFloat(el.dataset.ate),dec=+(el.dataset.dec||0),mil=el.dataset.mil,t0=null,d=1600;
+    function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/d),e=1-Math.pow(1-k,3),v=ate*e;
+      el.textContent=mil?Math.round(v).toLocaleString('pt-BR'):v.toFixed(dec).replace('.',',');if(k<1)requestAnimationFrame(f);}
+    requestAnimationFrame(f);}
+
+  // revelar com atraso em cascata
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('vis');el.querySelectorAll&&el.querySelectorAll('.cont').forEach(contar);io.unobserve(el);})},{rootMargin:'0px 0px -10% 0px'}):null;
+  var grupos={};
+  document.querySelectorAll('.rv').forEach(function(el){var pai=el.parentElement,k=grupos[pai]=(grupos[pai]||0);var irmaos=[].filter.call(pai.children,function(c){return c.classList.contains('rv')});el.style.transitionDelay=(irmaos.indexOf(el)*90)+'ms';if(io)io.observe(el);else{el.classList.add('vis');el.querySelectorAll('.cont').forEach(contar);}});
+
+  // parallax leve nas fotos plus
+  var par=document.querySelectorAll('[data-par]');
+  function mover(){par.forEach(function(el){var r=el.getBoundingClientRect(),c=r.top+r.height/2-innerHeight/2;el.style.transform='translateY('+(c*parseFloat(el.dataset.par))+'px)'})}
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){addEventListener('scroll',mover,{passive:true});mover();}
+})();
+</script>
+</body>
+</html>
