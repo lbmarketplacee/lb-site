@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /links/
+Disallow: /proposta/
 
 Sitemap: https://lbmarketplace.com.br/sitemap.xml
-Disallow: /proposta/
